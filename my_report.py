@@ -35,8 +35,13 @@ devices = [
         },
     ]
 
+# Print certian devices.
 print(f"  {devices[0]["hostname"]} ,   {devices[0]["family"]} ,   {devices[0]["platform"]} ,   {devices[0]["mgmt_ip"]} ,   {devices[0]["version"]}")
 print(f"  {devices[1]["hostname"]} ,   {devices[1]["family"]} ,   {devices[1]["platform"]} ,   {devices[1]["mgmt_ip"]} ,   {devices[1]["version"]}")
 print(f"  {devices[2]["hostname"]} ,   {devices[2]["family"]} ,   {devices[2]["platform"]} ,   {devices[2]["mgmt_ip"]} ,   {devices[2]["version"]}")
-print(f"  {devices[3]["hostname"]} ,   {devices[3]["family"]} ,   {devices[3]["platform"]} ,   {devices[3]["mgmt_ip"]} ,   {devices[3]["version"]}")
 
+print("----------------------")
+
+# Print all devices in the list dynamically.
+for device in devices:
+    print(f" {device["hostname"]} ,  {device["family"]} ,  {device["platform"]} ,  {device["mgmt_ip"]} ,  {device["version"]}")
