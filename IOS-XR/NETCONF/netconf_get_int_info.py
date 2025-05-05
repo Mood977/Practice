@@ -1,9 +1,11 @@
+import sys
+sys.path.append(r"d:\Practice\Practice\IOS-XR")
 from ncclient import manager
 from device_info import ios_xr_device
 from connect_functions import connect_ios_xr
 import xmltodict
 
-netconf_filter = open(r"d:\Practice\Practice\IOS-XR\filter-ietf-interfaces.xml").read()
+netconf_filter = open(r"d:\Practice\Practice\IOS-XR\NETCONF\filter-ietf-interfaces.xml").read()
 
 
 with connect_ios_xr(ios_xr_device) as m:  

@@ -1,3 +1,5 @@
+import sys
+sys.path.append(r"d:\Practice\Practice\IOS-XR")
 from ncclient import manager
 from device_info import ios_xr_device
 from connect_functions import connect_ios_xr
@@ -11,7 +13,7 @@ with connect_ios_xr(ios_xr_device) as m:
     print("===================================")
 
 # Saving the output to a file
-# output_file = r"d:\Practice\Practice\IOS-XR\netconf_capabilities_output.txt"
+# output_file = r"d:\Practice\Practice\IOS-XR\NETCONF\netconf_capabilities_output.txt"
 
 # with connect_ios_xr(ios_xr_device) as m:
 #     with open(output_file, "w") as f:

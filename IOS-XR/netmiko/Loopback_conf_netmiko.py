@@ -1,3 +1,5 @@
+import sys
+sys.path.append(r"d:\Practice\Practice\IOS-XR")
 from netmiko import ConnectHandler
 from device_info import ios_xr_device
 
