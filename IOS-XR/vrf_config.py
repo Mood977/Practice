@@ -1,12 +1,5 @@
 from netmiko import ConnectHandler
-
-ios_xr_device = {
-    "device_type": "cisco_xr",
-    "host": "sandbox-iosxr-1.cisco.com",
-    "username": "admin",
-    "password": "C1sco12345",
-    "port": 22,
-}
+from device_info import ios_xr_device
 
 net_connect = ConnectHandler(**ios_xr_device)
 
@@ -17,4 +10,3 @@ print(lines)
 vrf_config = net_connect.send_config_set(lines)
 print("The following config was send to the device:")
 print(vrf_config)
-

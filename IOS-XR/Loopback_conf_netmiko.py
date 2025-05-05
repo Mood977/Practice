@@ -1,12 +1,6 @@
 from netmiko import ConnectHandler
+from device_info import ios_xr_device
 
-ios_xr_device = {
-    "device_type": "cisco_xr",
-    "host": "sandbox-iosxr-1.cisco.com",
-    "username": "admin",
-    "password": "C1sco12345",
-    "port": 22,
-}
 
 net_connect = ConnectHandler(**ios_xr_device)
 
