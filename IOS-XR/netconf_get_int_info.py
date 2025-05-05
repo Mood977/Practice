@@ -1,20 +1,17 @@
 from ncclient import manager
 from device_info import ios_xr_device
+from connect_functions import connect_ios_xr
 import xmltodict
 
 netconf_filter = open(r"d:\Practice\Practice\IOS-XR\filter-ietf-interfaces.xml").read()
 
-with manager.connect(host=ios_xr_device["host"],
-                    username=ios_xr_device["username"],
-                    password=ios_xr_device["password"],
-                    hostkey_verify=False) as m:
-    
+
+with connect_ios_xr(ios_xr_device) as m:  
     # Get Configuration and State Info for Interface
     netconf_reply = m.get(netconf_filter)
     #print("NETCONF Reply:")
     #print("===================================")
     #print(netconf_reply)
-
 
     # Process the XML and store in useful dictionaries
     intf_details = xmltodict.parse(netconf_reply.xml)["rpc-reply"]["data"]
