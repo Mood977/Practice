@@ -1,0 +1,32 @@
+<config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"> 
+  <interfaces xmlns="http://openconfig.net/yang/interfaces">
+    <interface>
+      <name>{int_name}</name>
+      <config>
+        <name>{int_name}</name>
+        <type xmlns:idx="urn:ietf:params:xml:ns:yang:iana-if-type">idx:softwareLoopback</type>
+        <enabled>true</enabled>
+        <description>{int_desc}</description>
+      </config>
+      <subinterfaces>
+        <subinterface>
+          <index>0</index>
+          <config>
+            <index>0</index>
+          </config>
+          <ipv4 xmlns="http://openconfig.net/yang/interfaces/ip">
+            <addresses>
+              <address>
+                <ip>{ip_address}</ip>
+                <config>
+                  <ip>{ip_address}</ip>
+                  <prefix-length>{prefix_length}</prefix-length>
+                </config>
+              </address>
+            </addresses>
+          </ipv4>
+        </subinterface>
+      </subinterfaces>
+    </interface>
+  </interfaces>
+</config>

@@ -11,9 +11,9 @@ netconf_filter = open(r"d:\Practice\Practice\IOS-XR\NETCONF\filter-ietf-interfac
 with connect_ios_xr(ios_xr_device) as m:  
     # Get Configuration and State Info for Interface
     netconf_reply = m.get(netconf_filter)
-    #print("NETCONF Reply:")
-    #print("===================================")
-    #print(netconf_reply)
+    print("NETCONF Reply:")
+    print("===================================")
+    print(netconf_reply)
 
     # Process the XML and store in useful dictionaries
     intf_details = xmltodict.parse(netconf_reply.xml)["rpc-reply"]["data"]
