@@ -13,13 +13,12 @@ netconf_payload = edit_tepmplate.format(int_name="Loopback977",
                                         prefix_length="32")
 
 
-print("   ###   There's an issue in the XML temaplate, it fails the script with fatal error!!  ###   ")
-
 print("Conf Payload:")
 print("====================================")
 print(netconf_payload)
 
 with connect_ios_xr(ios_xr_device) as m: 
     # Send NETCONF <edit-config>
-    netconf_reply = m.edit_config(netconf_payload, target="running")
+    netconf_reply = m.edit_config(netconf_payload, target="candidate")
+    m.commit()
     print(netconf_reply)
