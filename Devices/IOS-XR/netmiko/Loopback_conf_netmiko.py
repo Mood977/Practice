@@ -1,14 +1,14 @@
 import sys
-sys.path.append(r"d:\Practice\Practice\IOS-XR")
+sys.path.append(r"d:\Practice\Practice\Devices")
 from netmiko import ConnectHandler
 from device_info import ios_xr_device
 
 
 net_connect = ConnectHandler(**ios_xr_device)
 
-loopback = {"int_name": "Loopback977",
+loopback = {"int_name": "Loopback777",
             "description": "MSK Loopback sent using Netmiko",
-            "ip": "20.20.20.2",
+            "ip": "20.20.30.2",
             "mask": "255.255.255.255" 
 }
 

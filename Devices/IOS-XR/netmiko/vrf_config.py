@@ -1,5 +1,5 @@
 import sys
-sys.path.append(r"d:\Practice\Practice\IOS-XR")
+sys.path.append(r"d:\Practice\Practice\Devices")
 from netmiko import ConnectHandler
 from device_info import ios_xr_device
 
@@ -8,7 +8,7 @@ from device_info import ios_xr_device
 net_connect = ConnectHandler(**ios_xr_device)
 
 # Read VRF configuration from file
-with open(r"d:\Practice\Practice\IOS-XR\netmiko\vrf_conf") as f:
+with open(r"d:\Practice\Practice\Devices\IOS-XR\netmiko\vrf_conf") as f:
     lines = f.read().splitlines()
 print(lines)
 

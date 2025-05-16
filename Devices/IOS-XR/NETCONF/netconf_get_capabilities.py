@@ -1,5 +1,5 @@
 import sys
-sys.path.append(r"d:\Practice\Practice\IOS-XR")
+sys.path.append(r"d:\Practice\Practice\Devices")
 from ncclient import manager
 from device_info import ios_xr_device
 from connect_functions import connect_ios_xr
