@@ -14,5 +14,5 @@ print(lines)
 
 # Send configuration to the device
 vrf_config = net_connect.send_config_set(lines)
-print("The following config was send to the device:")
+print("The following config was sent to the device:")
 print(vrf_config)

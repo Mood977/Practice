@@ -1,3 +1,5 @@
+hostname XRRouter
+
 vrf MSK-977
  address-family ipv4 unicast
   import route-target
@@ -11,12 +13,6 @@ vrf MSK-977
 interface Loopback977
  vrf MSK-977
  ipv4 address 20.20.20.3 255.255.255.255
-
-router bgp 65530
- vrf MSK-977
-  rd 977:977
-  address-family ipv4 unicast
-   redistribute connected
 
 
 
